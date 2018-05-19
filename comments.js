@@ -13,7 +13,7 @@ function comments(state=[], action){
                     }, ...state.comments];
         
         case REMOVE_COMMENT:
-            return state.filter(comment => comment.id !== action.id);
+            return state.comments.filter(comment => comment.id !== action.id);
             
         case EDIT_COMMENT:
             return state.comments.map(comment => {
